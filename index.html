@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Todo Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+
+    <!-- Toggles left navigation menu open/closed -->
+
+    <input type="checkbox" id="menu_toggle" />
+
+    <!-- Left navigation menu -->
+
+    <nav>
+
+      <section class="all_todos">
+
+        <header>
+
+          <h2>All Todos</h2><!--
+
+          --><div class="msg_count">18</div>
+
+        </header>
+
+        <ul>
+
+          <li class="active">
+            <p>02/16</p><!--
+            --><div class="msg_count">8</div>
+          </li>
+
+          <li>
+            <p>03/16</p><!--
+            --><div class="msg_count">2</div>
+          </li>
+
+          <li>
+            <p>04/16</p><!--
+            --><div class="msg_count">1</div>
+          </li>
+
+          <li>
+            <p>05/16</p><!--
+            --><div class="msg_count">1</div>
+          </li>
+
+          <li>
+            <p>06/16</p><!--
+            --><div class="msg_count">6</div>
+          </li>
+
+        </ul>
+
+      </section>
+
+      <section class="completed_todos">
+
+        <header>
+
+          <h2>Completed</h2>
+
+        </header>
+
+        <ul>
+
+          <li>
+            <p>02/16</p>
+          </li>
+
+          <li>
+            <p>03/16</p>
+          </li>
+
+          <li>
+            <p>04/16</p>
+          </li>
+
+          <li>
+            <p>05/16</p>
+          </li>
+
+          <li>
+            <p>06/16</p>
+          </li>
+
+        </ul>
+
+      </section>
+
+    </nav>
+
+    <!-- List of todos -->
+
+    <main>
+
+      <div class="column">
+
+        <!-- Toggles left navigation menu open/closed -->
+
+        <nav>
+          <label for="menu_toggle">
+            <img src="images/icon_burger.png" alt="Toggle menu" />
+          </label>
+        </nav>
+
+        <header>
+
+          <h3>02/16</h3><!--
+
+          --><div class="msg_count">8</div>
+
+        </header>
+
+        <p class="add_todo">Add new to do</p>
+
+        <ul>
+
+          <li>
+            <div>
+              <input type="checkbox" name="item1" id="item1" />
+              <label for="item1"></label>
+              <p>
+                <label for="toggle_todo">Item 1</label>
+              </p>
+            </div>
+            <img src="images/icon_trash.png" alt="Trashcan" />
+          </li>
+
+          <li>
+            <div>
+              <input type="checkbox" name="item2" id="item2" />
+              <label for="item2"></label>
+              <p>Item 2</p>
+            </div>
+            <img src="images/icon_trash.png" alt="Trashcan" />
+          </li>
+
+          <li>
+            <div>
+              <input type="checkbox" name="item3" id="item3" checked />
+              <label for="item3"></label>
+              <p>Item 3</p>
+            </div>
+            <img src="images/icon_trash.png" alt="Trashcan" />
+          </li>
+
+          <li>
+            <div>
+              <input type="checkbox"  name="item4" id="item4" checked />
+              <label for="item4"></label>
+              <p>Item 4</p>
+            </div>
+            <img src="images/icon_trash.png" alt="Trashcan" />
+          </li>
+
+          <li>
+            <div>
+              <input type="checkbox"  name="item5" id="item5" checked />
+              <label for="item5"></label>
+              <p>Item 5</p>
+            </div>
+            <img src="images/icon_trash.png" alt="Trashcan" />
+          </li>
+
+          <li>
+            <div>
+              <input type="checkbox"  name="item6" id="item6" />
+              <label for="item6"></label>
+              <p>Item 6</p>
+            </div>
+            <img src="images/icon_trash.png" alt="Trashcan" />
+          </li>
+
+          <li>
+            <div>
+              <input type="checkbox"  name="item7" id="item7" />
+              <label for="item7"></label>
+              <p>Item 7</p>
+            </div>
+            <img src="images/icon_trash.png" alt="Trashcan" />
+          </li>
+
+          <li>
+            <div>
+              <input type="checkbox"  name="item8" id="item8" />
+              <label for="item8"></label>
+              <p>Item 8</p>
+            </div>
+            <img src="images/icon_trash.png" alt="Trashcan" />
+          </li>
+
+          <li>
+            <div>
+              <input type="checkbox"  name="item9" id="item9" />
+              <label for="item9"></label>
+              <p>Item 9</p>
+            </div>
+            <img src="images/icon_trash.png" alt="Trashcan" />
+          </li>
+
+        </ul>
+
+      </div>
+
+      <!-- Triggers todo edit popup -->
+
+      <input type="checkbox" id="toggle_todo" />
+
+      <!-- Popup form to edit todo -->
+
+      <div class="popup">
+
+        <form class="edit_todo" action="#" method="post">
+
+          <fieldset>
+
+            <dl>
+              <dt>
+                <label for="title">Title</label>
+              </dt><!--
+              --><dd>
+                <input type="text" name="title" id="title" />
+              </dd>
+            </dl>
+
+            <dl>
+              <dt>Due Date</dt><!--
+              --><dd>
+
+                <label for="day">Day</label>
+                <select name="day" id="day">
+                  <option selected disabled>Day</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                </select> /
+
+                <label for="month">Month</label>
+                <select name="month" id="month">
+                  <option selected disabled>Month</option>
+                  <option>January</option>
+                  <option>February</option>
+                  <option>March</option>
+                </select> /
+
+                <label for="year">Year</label>
+                <select name="year" id="year">
+                  <option selected disabled>Year</option>
+                  <option>1981</option>
+                  <option>1982</option>
+                  <option>1983</option>
+                </select>
+
+              </dd>
+            </dl>
+
+            <dl>
+              <dt>
+                <label for="description">Description</label>
+              </dt><!--
+              --><dd>
+                <textarea name="description" id="description" rows="8" cols="80" placeholder="Description"></textarea>
+              </dd>
+            </dl>
+
+            <div class="edit_todo_inputs">
+              <input class="btn" type="submit" value="Save" /><!--
+              --><input class="btn" type="submit" value="Mark As Complete" />
+            </div>
+
+          </fieldset>
+
+        </form>
+
+      </div>
+
+    </main>
+
+  </body>
+
+</html>

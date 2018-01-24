@@ -1,0 +1,379 @@
+/*
+==============================
+CSS Reset
+==============================
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+fieldset {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+==============================
+Common Styles
+==============================
+*/
+
+html {
+  font: normal 16px Helvetica, Arial, sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+h2 {
+  display: inline-block;
+  padding: 14px 0 14px 36px;
+}
+
+h3 {
+  display: inline-block;
+  color: #050505;
+  font-size: 21px;
+  margin: 11px 0 11px 0;
+}
+
+div.msg_count {
+  display: inline-block;
+  background: #6b7292;
+  text-align: center;
+  padding: 3px 0.5rem;
+  border-radius: 25px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/*
+==============================
+Nav Menu Styles
+==============================
+*/
+
+body > nav {
+  width: 335px;
+  height: 100vh;
+  background: #464f77;
+  float: left;
+  padding-top: 71px;
+}
+
+nav header {
+  height: 46px;
+  padding-left: 102px;
+  padding-right: 32px;
+  color: #d8d9e0;
+}
+
+nav li {
+  padding-left: 138px;
+  padding-right: 32px;
+  color: #a7aaba;
+  cursor: pointer;
+}
+
+nav li.active {
+  background: #383f5f;
+  color: #fff;
+}
+
+nav li.active div {
+  background: #148fd5;
+}
+
+nav li p {
+  padding: 14px 0;
+  display: inline-block;
+}
+
+nav div.msg_count {
+  float: right;
+  margin-top: 11px;
+}
+
+nav section {
+  padding-bottom: 53px;
+}
+
+nav section.all_todos h2 {
+  background: transparent url("images/icon_menu.png") 0 50% no-repeat;
+}
+
+nav section.completed_todos h2 {
+  background: transparent url("images/icon_checkedbox_lrg.png") 0 50% no-repeat;
+}
+
+nav section.completed_todos p {
+  text-decoration: line-through;
+}
+
+/*
+==============================
+Main Menu Styles
+==============================
+*/
+
+main {
+  position: relative;
+  max-width: 100%;
+  height: 100vh;
+  margin-left: 335px;
+  padding: 71px 100px 0 32px;
+}
+
+div.column > nav {
+  display: none;
+}
+
+main header {
+  height: 46px;
+}
+
+main div.msg_count {
+  background: #148fd5;
+  margin-left: 19px;
+  color: #fff;
+  vertical-align: 2px;
+}
+
+main p.add_todo {
+  display: inline-block;
+  padding: 17px 15px;
+  color: #148fd5;
+  cursor: pointer;
+}
+
+main p.add_todo::before {
+  content: "";
+  display: inline-block;
+  height: 13px;
+  width: 27px;
+  background: transparent url("images/icon_plus.png") 0 0 no-repeat;
+}
+
+div.column li {
+  border-top: 1px solid #e7e7e7;
+  overflow: hidden;
+}
+
+div.column li div {
+  width: 90%;
+  float: left;
+}
+
+div.column li div:hover {
+  color: #148fd5;
+  cursor: pointer;
+}
+
+div.column li div > label {
+  display: inline-block;
+  margin: 16px 8px 16px 13px;
+}
+
+div.column li div > label::before {
+  content: "";
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  background: transparent url("images/icon_checkbox.png") 0 0 no-repeat;
+}
+
+div.column li div p {
+  display: inline-block;
+}
+
+div.column li p label:hover {
+  cursor: pointer;
+}
+
+div.column li input:checked ~ p {
+  text-decoration: line-through;
+  color: #b3b3b3;
+}
+
+div.column li input:checked + label::before {
+  background: transparent url("images/icon_checkedbox.png") 0 0 no-repeat;
+}
+
+div.column li img {
+  float: right;
+  display: inline-block;
+  padding-top: 17px;
+}
+
+input#toggle_todo:checked + div.popup form {
+  display: block;
+}
+
+input#toggle_todo:checked + div.popup::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+}
+
+/*
+==============================
+Modal Styles
+==============================
+*/
+
+form.edit_todo {
+  display: none;
+  position: absolute;
+  top: 15vh;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  padding: 38px 31px;
+  height: 400px;
+  width: 575px;
+  background: white;
+}
+
+form.edit_todo dl:nth-of-type(2) dd label {
+  display: none;
+}
+
+dl {
+  padding-bottom: 24px;
+}
+
+dt,
+dd,
+select {
+  display: inline-block;
+}
+
+dt {
+  width: 110px;
+  vertical-align: top;
+  padding-top: 12px;
+}
+
+dd {
+  width: 403px;
+  vertical-align: middle;
+}
+
+input[type="text"],
+textarea,
+select {
+  border: 1px solid #b3b3b3;
+  padding: 10px;
+}
+
+select {
+  width: 29%;
+  -webkit-appearance: none;
+  background: #fff;
+  border-radius: 0;
+  margin: 0 5px;
+  color: #757575;
+}
+
+select:first-of-type {
+  margin-left: 0;
+}
+
+option {
+  color: #000;
+}
+
+textarea {
+  width: 100%;
+  height: 144px;
+  resize: none;
+}
+
+input[type="text"] {
+  height: 36px;
+  width: 100%;
+}
+
+div.edit_todo_inputs {
+  padding-left: 110px;
+}
+
+input.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+  background: #148fd5;
+  border-radius: 4px;
+  color: #fff;
+  width: 184px;
+  margin-right: 20px;
+  border: none;
+}
+
+input.btn:last-of-type {
+  margin-right: 0;
+}
+
+/*
+==============================
+Responsive Styles
+==============================
+*/
+
+@media (max-width: 768px) {
+  body {
+    min-width: 468px;
+  }
+
+  body > nav {
+    display: none;
+  }
+
+  main {
+    padding-top: 23px;
+    margin-left: 0;
+    overflow: hidden;
+  }
+
+  main div.column {
+    min-width: 302px;
+  }
+
+  main div.column > nav {
+    padding-bottom: 30px;
+    display: block;
+  }
+
+  main div.column > nav img {
+    display: block;
+  }
+
+  input#menu_toggle:checked + nav {
+    display: block;
+  }
+}
